@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'home' %}"> <i class="fa-solid fa-graduation-cap"></i> Student Management System</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+        </div>
+      </div>
+    </nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+
+    </div>
+    <nav>
+        
+    </nav>
+    <h3 class="text-center m-4">{{student.first_name}} Details</h3>
+    <div class="container d-flex align-items-center justify-content-evenly">
+    <div class="card text-white bg-primary" style="max-width: 20rem;">
+        <!--Display Info-->
+        <div class="card-header"><i class="fa-solid fa-info fa-lg"></i></div>
+        <div class="card-body">
+          <h4 class="card-title">{{student.first_name}} {{student.last_name}}</h4>
+          <p class="card-text">
+            Student Number: {{student.student_number}}<br>
+            Course of Study: {{student.field_of_study}}<br>
+            Grade: {{student.gpa}}<br>
+          </p>
+        </div>
+      </div>
+    </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
